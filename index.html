@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>211AMOY｜大阪・十三のプライベート東洋リラクゼーションサロン</title>
+  <meta name="description" content="大阪・十三の完全予約制プライベートサロン。お灸、かっさ、カッピングを中心に、静かに整える時間をご提供します。" />
+  <style>
+    :root{
+      --bg:#f4eddf;
+      --paper:#fffaf0;
+      --ink:#493d32;
+      --muted:#86796a;
+      --line:#dfd0bd;
+      --accent:#5a4636;
+      --gold:#9b7a49;
+      --soft:#eee2d1;
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;line-height:1.9;letter-spacing:.04em}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 34px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(244,237,223,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(73,61,50,.08)}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-size:18px;letter-spacing:.12em;white-space:nowrap}
+    .navlinks{display:flex;gap:24px;align-items:center;font-size:13px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 23px;border:1px solid var(--accent);background:var(--accent);color:#fff;font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;letter-spacing:.06em;box-shadow:0 16px 28px rgba(73,61,50,.18)}
+    .btn.sub{background:transparent;color:var(--accent);box-shadow:none;border-color:#b99b77}
+    .hero{padding:58px 0 42px;border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+    .eyebrow{font-family:"Helvetica Neue",Arial,sans-serif;text-transform:uppercase;font-size:12px;letter-spacing:.22em;color:var(--gold);margin-bottom:22px}
+    h1{font-size:clamp(48px,8vw,104px);line-height:1.05;margin:0 0 26px;font-weight:400;letter-spacing:.08em}
+    .lead{font-size:16px;color:#66584b;max-width:650px;margin:0 0 30px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+    .hero-photo{border-radius:36px;overflow:hidden;min-height:520px;box-shadow:0 24px 70px rgba(73,61,50,.14);background:var(--soft)}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(.95)}
+    section{padding:82px 0;border-bottom:1px solid var(--line)}
+    .section-head{margin-bottom:34px}
+    .section-head h2{font-size:34px;font-weight:400;margin:0 0 8px;letter-spacing:.12em}
+    .section-head p{margin:0;color:var(--muted);font-size:14px}
+    .intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}
+    .intro-card{background:rgba(255,250,240,.58);border:1px solid var(--line);border-radius:var(--radius);padding:34px}
+    .intro-card h3{margin:0 0 18px;font-size:22px;font-weight:500}
+    .intro-card p{margin:0 0 14px;color:#66584b}
+    .photo-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .photo-grid img{height:310px;width:100%;object-fit:cover;border-radius:24px;border:1px solid rgba(73,61,50,.08)}
+    .photo-grid img:first-child{height:638px;grid-row:span 2}
+    .menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .menu-item{background:rgba(255,250,240,.62);border:1px solid var(--line);border-radius:22px;padding:24px 25px;display:flex;justify-content:space-between;gap:18px;align-items:center}
+    .menu-item h3{font-size:17px;margin:0 0 4px;font-weight:600;letter-spacing:.06em}
+    .menu-item p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .price{font-family:Georgia,serif;color:var(--gold);font-size:20px;white-space:nowrap}
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .flow-card{background:rgba(255,250,240,.54);border:1px solid var(--line);border-radius:24px;padding:28px 22px;min-height:210px}
+    .num{font-family:Georgia,serif;color:var(--gold);font-size:22px;margin-bottom:18px}
+    .flow-card h3{font-size:16px;margin:0 0 12px}
+    .flow-card p{font-size:14px;color:#66584b;margin:0}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .gallery img{height:330px;width:100%;object-fit:cover;border-radius:26px;border:1px solid rgba(73,61,50,.08)}
+    .info{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .info-card{background:rgba(255,250,240,.58);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+    .info-card h3{margin:0 0 14px;font-size:20px;font-weight:500}
+    .info-card p{margin:0 0 8px;color:#66584b}
+    .notice{font-size:13px;color:var(--muted);margin-top:20px}
+    footer{padding:42px 0 58px;color:var(--muted);font-size:13px}
+    .footer-grid{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
+    @media (max-width:860px){
+      .navlinks{display:none}.hero{padding-top:34px}.hero-grid,.intro,.info{grid-template-columns:1fr}.hero-photo{min-height:360px;order:-1}h1{font-size:54px}.menu-grid,.flow,.gallery{grid-template-columns:1fr}.photo-grid{grid-template-columns:1fr}.photo-grid img,.photo-grid img:first-child{height:280px;grid-row:auto}.menu-item{align-items:flex-start}.price{font-size:18px}.gallery img{height:285px}section{padding:58px 0}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">211AMOY</a>
+      <nav class="navlinks">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#flow">Flow</a>
+        <a href="#access">Access</a>
+      </nav>
+      <a class="btn" href="https://www.instagram.com/hedan1220/" target="_blank" rel="noopener">Instagramで予約</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Private Oriental Care</div>
+          <h1>静かに、深く、<br>自分を整える時間。</h1>
+          <p class="lead">大阪・十三の完全予約制プライベートサロン。お灸・かっさ・カッピングを中心に、古くから親しまれてきた東洋のケアを、落ち着いた日式空間でお過ごしいただけます。</p>
+          <div class="cta">
+            <a class="btn" href="https://www.instagram.com/hedan1220/" target="_blank" rel="noopener">Instagramで予約</a>
+            <a class="btn sub" href="mailto:hedan7965@gmail.com">メールで相談</a>
+          </div>
+        </div>
+        <div class="hero-photo"><img src="assets/room-beds.jpg" alt="プライベートサロンの施術ベッド"></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap intro">
+        <div class="photo-grid">
+          <img src="assets/lounge-room.jpg" alt="サロン内観">
+          <img src="assets/moxa-sticks.jpg" alt="お灸の道具">
+          <img src="assets/tools-cart.jpg" alt="カッピングとケア用品">
+        </div>
+        <div class="intro-card">
+          <div class="eyebrow">About the Space</div>
+          <h3>完全予約制の小さなプライベート空間</h3>
+          <p>他のお客様と重なりにくい、静かな時間を大切にしています。</p>
+          <p>日々の忙しさから少し離れ、ゆっくり呼吸できる場所としてお過ごしください。</p>
+          <p>初めての方も、ご希望やその日のコンディションを伺いながら、無理のない内容でご案内します。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Menu</h2>
+          <p>施術メニュー / 価格</p>
+        </div>
+        <div class="menu-grid">
+          <div class="menu-item"><div><h3>かっさ</h3><p>20分</p></div><div class="price">¥1,800</div></div>
+          <div class="menu-item"><div><h3>カッピング</h3><p>伝統熱抜罐・台湾煮沸 / 20分</p></div><div class="price">¥3,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア</h3><p>肩・首・背中 / 60分</p></div><div class="price">¥7,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア + カッピング</h3><p>肩・首・背中 / 75分</p></div><div class="price">¥9,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア + かっさ</h3><p>肩・腰・背中 / 70分</p></div><div class="price">¥8,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア</h3><p>胸まわり / 60分</p></div><div class="price">¥7,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア</h3><p>腹部 / 60分</p></div><div class="price">¥7,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア</h3><p>頭部・顔まわり / 60分</p></div><div class="price">¥6,000</div></div>
+          <div class="menu-item"><div><h3>キッズ東洋ケア</h3><p>推拿・背中・腹部 / 60分</p></div><div class="price">¥6,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア</h3><p>脚 / 70分</p></div><div class="price">¥8,000</div></div>
+          <div class="menu-item"><div><h3>手工お灸ケア</h3><p>背中 + 腹部 / 120分</p></div><div class="price">¥13,000</div></div>
+        </div>
+        <p class="notice">表示価格は税込です。内容や時間は当日のご希望に合わせてご案内します。</p>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="wrap">
+        <div class="section-head"><h2>Flow</h2><p>初めての方へ</p></div>
+        <div class="flow">
+          <div class="flow-card"><div class="num">01</div><h3>ご予約</h3><p>Instagram・メール・LINEより、ご希望の日時をご連絡ください。</p></div>
+          <div class="flow-card"><div class="num">02</div><h3>ご来店</h3><p>完全予約制のため、静かな空間でゆっくりお過ごしいただけます。</p></div>
+          <div class="flow-card"><div class="num">03</div><h3>ヒアリング</h3><p>その日のコンディションやご希望を丁寧にお伺いします。</p></div>
+          <div class="flow-card"><div class="num">04</div><h3>リラックス</h3><p>温かく落ち着いた時間を、ゆったりとお楽しみください。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>Gallery</h2><p>サロンの空間</p></div>
+        <div class="gallery">
+          <img src="assets/room-beds-wide.jpg" alt="施術ルーム">
+          <img src="assets/lounge-room-2.jpg" alt="カウンセリングスペース">
+          <img src="assets/moxa-sticks.jpg" alt="お灸の道具">
+        </div>
+      </div>
+    </section>
+
+    <section id="access">
+      <div class="wrap info">
+        <div class="info-card">
+          <div class="eyebrow">Access</div>
+          <h3>211AMOY株式会社</h3>
+          <p>大阪府大阪市淀川区十三東4-5-10</p>
+          <p>Villa Espoir 201号室</p>
+          <p>営業時間：9:00 - 20:00</p>
+        </div>
+        <div class="info-card">
+          <div class="eyebrow">Contact</div>
+          <h3>ご予約・お問い合わせ</h3>
+          <p>Instagram：<a href="https://www.instagram.com/hedan1220/" target="_blank" rel="noopener">@hedan1220</a></p>
+          <p>Email：<a href="mailto:hedan7965@gmail.com">hedan7965@gmail.com</a></p>
+          <p>LINE：070-8557-7965</p>
+          <p>WeChat：070-9011-7891</p>
+          <p class="notice">当サロンはリラクゼーションを目的としたプライベートサロンです。体調に不安のある方は事前にご相談ください。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>© 211AMOY株式会社（Niichiichi Amoy Inc.）</div>
+      <div>Private Oriental Care / Osaka Juso</div>
+    </div>
+  </footer>
+</body>
+</html>
